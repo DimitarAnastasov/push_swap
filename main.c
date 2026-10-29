@@ -6,7 +6,7 @@
 /*   By: dianasta <dianasta@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 16:05:47 by dianasta          #+#    #+#             */
-/*   Updated: 2026/10/28 18:17:58 by dianasta         ###   ########.fr       */
+/*   Updated: 2026/10/29 18:16:02 by dianasta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,6 @@ so only using the keyboard
 soooo how would i take the input here ??? ??
 */
 
-int check_for_flag(char *s)
-{
-	if (s == "--simple")
-		return(1);
-	else if (s == "--medium")
-		return(2);
-	else if (s == "--complex")
-		return(3);
-	else if (s == "--adaptive")
-		return(0);
-	else if (s == "--bench")
-		return(5);
-	else
-	{
-		ft_printf("Error");
-		return (NULL);
-	}
-}
-
 // what the parser is supposed to do
 /*
 know if the argument is a flag first and assign a strat 
@@ -66,6 +47,15 @@ void return_error(void)
 	exit(1);
 }
 
+int check_int(char *s)
+{
+	while (*s && *s >= '0' && *s <= '9')
+		s++;
+	if(!*s)
+		return(atoi(s)); ///hmmm  do i need this at all?? how did atoi work
+	// so atoi does work just fine here and i don't need this function at all actually mmmh 
+}
+
 int parser(char **argv, int *strat) // and stack that is defined somehow
 {
 	if (argv[1] == "--simple")
@@ -76,10 +66,28 @@ int parser(char **argv, int *strat) // and stack that is defined somehow
 		*strat = COMPLEX; 
 	else if (argv[1] == "--adaptive")
 		*strat = ADAPTIVE;
+	else if (argv[1] == "--bench")
+		*strat = 7;// idk what to put here so typed this with the strat for a place holder... in this case we need to check again for the strategy nxt but this also must be implemented with the strat flags because we might have a bench flag afterwards too
 	else
 		return_error();
+		/* 
+		this is not correct right now but im keeping it until
+		i figure out what to put here whats next is again a check for the flags again in the
+		case of a bench flag or strat and then we need to check if there is the another flag shi
+		but careful cuz the next flag could only be one we haven't used yeeettttt
+		adn then we need to check for numbers... i think i can do that with just atoi but i need
+		to wokr on it and change up some things because it needs to give me errors in some cases
+		and before that shouldn't be pasing the things with ft_split?? omit the spaces and create
+		new strings that are separate, but then what if i get different strings i wouldn't need this 
+		shhiiiiiit idk mate how do i make this then
+
+		so a question is when we input like ./push_swap 1 3 5 2 do 
+		
+		*/
 	return(1);
 }
+
+// sooooo how do i figure this out actually then mmmmmmmm
 
 int	main(int argc, char **argv)
 {
@@ -101,4 +109,6 @@ int	main(int argc, char **argv)
 	// we could get a flag or a number, when should be flags be given 
 		
 }
+
+
 
