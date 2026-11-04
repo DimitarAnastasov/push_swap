@@ -6,7 +6,7 @@
 /*   By: dianasta <dianasta@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 12:00:00 by dianasta          #+#    #+#             */
-/*   Updated: 2026/11/04 13:40:55 by dianasta         ###   ########.fr       */
+/*   Updated: 2026/11/04 15:52:01 by dianasta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	put_strategy(t_ctx *c)
 static void	put_counts(t_ctx *c)
 {
 	static char	*names[11] = {"sa", "sb", "ss", "pa", "pb", "ra", "rb", "rr",
-			"rra", "rrb", "rrr"};
+		"rra", "rrb", "rrr"};
 	int			i;
 
 	i = 0;
