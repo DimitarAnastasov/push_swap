@@ -5,7 +5,7 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 SRC = main.c parse.c parse_utils.c ft_atol.c stack.c \
 	ops_basic.c ops_rotate.c ops_swap.c ops_push.c ops_rot.c ops_rev.c \
-	rank.c move.c sort.c sort_simple.c sort_medium.c sort_complex.c bench.c
+	rank.c move.c sort.c sort_simple.c sort_small.c sort_medium.c sort_complex.c bench.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

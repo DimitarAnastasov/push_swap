@@ -6,7 +6,7 @@
 /*   By: dianasta <dianasta@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 16:05:47 by dianasta          #+#    #+#             */
-/*   Updated: 2026/11/04 13:40:51 by dianasta         ###   ########.fr       */
+/*   Updated: 2026/11/05 22:46:49 by dianasta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	main(int argc, char **argv)
 {
-	t_ctx	c;
+	t_ctx	c;//cambiar el nombre 
 
 	if (argc < 2)
-		return (0);
+		return (0);//why not 1
 	ctx_init(&c);
 	if (!parse_args(argc, argv, &c))
 	{

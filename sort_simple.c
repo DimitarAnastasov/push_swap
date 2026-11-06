@@ -48,6 +48,11 @@ void	sort_simple(t_ctx *c)
 {
 	int	target;
 
+	if (c->a.size <= 5)
+	{
+		sort_small(c);
+		return ;
+	}
 	target = 0;
 	while (c->a.size > 3)
 	{

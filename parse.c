@@ -6,7 +6,7 @@
 /*   By: dianasta <dianasta@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 17:33:14 by dianasta          #+#    #+#             */
-/*   Updated: 2026/11/04 13:41:10 by dianasta         ###   ########.fr       */
+/*   Updated: 2026/11/05 23:02:42 by dianasta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,13 @@ int	parse_flag(char *arg, t_ctx *c, int *strat_set)
 		c->strat = s;
 		return (1);
 	}
-	if (arg[0] == '-' && arg[1] == '-')
-		return (-1);
 	return (0);
 }
 
 int	parse_args(int argc, char **argv, t_ctx *c)
 {
 	int	i;
-	int	r;
+	int	r;//chnage name
 	int	strat_set;
 
 	strat_set = 0;

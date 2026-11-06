@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-static int	adaptive_pick(double disorder)
+static int	adaptive_pick(double disorder, int size)
 {
-	if (disorder < 0.2)
+	if (size <= 5 || disorder < 0.2)
 		return (SIMPLE);
 	if (disorder < 0.5)
 		return (MEDIUM);
@@ -25,7 +25,7 @@ void	run_sort(t_ctx *c)
 {
 	c->used = c->strat;
 	if (c->strat == ADAPTIVE)
-		c->used = adaptive_pick(c->disorder);
+		c->used = adaptive_pick(c->disorder, c->a.size);
 	if (is_sorted(&c->a))
 		return ;
 	if (c->used == SIMPLE)

@@ -6,7 +6,7 @@
 /*   By: dianasta <dianasta@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 16:32:21 by dianasta          #+#    #+#             */
-/*   Updated: 2026/11/04 13:41:11 by dianasta         ###   ########.fr       */
+/*   Updated: 2026/11/05 22:41:51 by dianasta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ int					max_bits(int n);
 /* sort.c and the strategies */
 void				run_sort(t_ctx *c);
 void				sort_three(t_ctx *c);
+void				sort_small(t_ctx *c);
 void				sort_simple(t_ctx *c);
 void				sort_medium(t_ctx *c);
 void				sort_complex(t_ctx *c);
