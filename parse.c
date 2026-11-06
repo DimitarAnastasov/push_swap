@@ -50,17 +50,17 @@ int	parse_flag(char *arg, t_ctx *c, int *strat_set)
 int	parse_args(int argc, char **argv, t_ctx *c)
 {
 	int	i;
-	int	r;//chnage name
+	int	flag;
 	int	strat_set;
 
 	strat_set = 0;
 	i = 1;
 	while (i < argc)
 	{
-		r = parse_flag(argv[i], c, &strat_set);
-		if (r < 0)
+		flag = parse_flag(argv[i], c, &strat_set);
+		if (flag < 0)
 			return (0);
-		if (r == 0 && !add_arg(&c->a, argv[i]))
+		if (flag == 0 && !add_arg(&c->a, argv[i]))
 			return (0);
 		i++;
 	}

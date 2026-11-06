@@ -14,23 +14,23 @@
 
 int	main(int argc, char **argv)
 {
-	t_ctx	c;//cambiar el nombre 
+	t_ctx	ctx;
 
 	if (argc < 2)
-		return (0);//why not 1
-	ctx_init(&c);
-	if (!parse_args(argc, argv, &c))
+		return (0);
+	ctx_init(&ctx);
+	if (!parse_args(argc, argv, &ctx))
 	{
-		free_stack(&c.a);
+		free_stack(&ctx.a);
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	rank_stack(&c.a);
-	c.disorder = compute_disorder(&c.a);
-	run_sort(&c);
-	if (c.bench)
-		print_bench(&c);
-	free_stack(&c.a);
-	free_stack(&c.b);
+	rank_stack(&ctx.a);
+	ctx.disorder = compute_disorder(&ctx.a);
+	run_sort(&ctx);
+	if (ctx.bench)
+		print_bench(&ctx);
+	free_stack(&ctx.a);
+	free_stack(&ctx.b);
 	return (0);
 }
