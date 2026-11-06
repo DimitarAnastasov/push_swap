@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by dianasta*
+*This activity has been created as part of the 42 curriculum by dianasta*
 
 # push_swap
 
@@ -114,8 +114,11 @@ depending on the draw it uses medium (excellent range) or complex (good range).
 
 ## Contributions
 
-- **dianasta**: <fill in: e.g. parsing, stack and operations, ...>
-- **<partner_login>**: <fill in: e.g. sorting strategies, bench mode, ...>
+This project was done alone by **dianasta**, in agreement with the pedagogical
+team. All parts are mine: argument parsing and error handling, the stacks and the
+11 operations, rank normalisation and the disorder metric, the four strategies
+(simple, medium, complex, adaptive), the small sort for 5 values or fewer, and the
+`--bench` mode.
 
 ## Resources
 
@@ -137,4 +140,3 @@ AI was used in these ways:
 - **Algorithm ideas:** suggestions on how to reduce the operation count
   (for example combining `rr`/`rrr`, a quicksort-style alternative to radix) and
   explanations of the complexity classes.
-
